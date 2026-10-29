@@ -100,9 +100,9 @@ Maximum port to search.
 ##### options.host
 
 Type: `string`\
-Default: `'127.0.0.1'`
+Default: all local addresses
 
-Host to check availability on.
+Host to check availability on. When omitted, a port only counts as free if it can be bound on the unspecified address (what `server.listen(port)` uses), `0.0.0.0`, `127.0.0.1` and `::1`. This matters on Windows, where a `127.0.0.1` bind succeeds even while another process listens on `0.0.0.0`/`::`.
 
 ### isPortFree(port, host?)
 
@@ -119,9 +119,9 @@ Port to check.
 #### host
 
 Type: `string`\
-Default: `'127.0.0.1'`
+Default: all local addresses (see `options.host`)
 
-Host to check on.
+Host to check on. Rejects if the host is not a local address. Invalid ports (not an integer in 1–65535) reject with a `RangeError`.
 
 ## FAQ
 

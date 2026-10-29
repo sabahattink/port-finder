@@ -21,6 +21,14 @@
   "keywords": ["port", "finder", "available", "free", "network"],
   "author": "Scuton Technology",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scuton-technology/port-finder.git"
+  },
+  "homepage": "https://github.com/scuton-technology/port-finder#readme",
+  "bugs": {
+    "url": "https://github.com/scuton-technology/port-finder/issues"
+  },
   "devDependencies": {
     "typescript": "^5.6.0",
     "tsup": "^8.0.0",
